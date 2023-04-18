@@ -1,0 +1,44 @@
+:root{
+    --default_color: #fff;
+    --background: #1b1d27;
+    --color_one: #ffc400;
+    --color_two: #c300ff;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+  color: var(--default_color);
+
+}
+
+body h1 {
+    text-align: center;
+  font-size: 8rem;
+  text-transform: uppercase;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--default_color), 0 0 20px var(--default_color),
+      0 0 30px var(--color_one), 0 0 40px var(--color_one), 0 0 50px var(--color_one),
+      0 0 60px var(--color_one), 0 0 70px var(--color_one);
+  }
+  to {
+    text-shadow: 0 0 10px var(--default_color), 0 0 20px var(--color_two),
+      0 0 30px var(--color_two), 0 0 40px var(--color_two), 0 0 50px var(--color_two),
+      0 0 60px var(--color_two), 0 0 70px var(--color_two);
+  }
+}
